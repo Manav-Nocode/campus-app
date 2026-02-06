@@ -14,7 +14,9 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+app.use(cors({
+    origin: 'https://campus-app-five.vercel.app' 
+  }));
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({

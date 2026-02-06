@@ -45,7 +45,7 @@ function App() {
     }
 
     // Fetch listings
-    fetch('http://localhost:3000/listings')
+    fetch('https://campus-app-n2ab.onrender.com/listings')
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -64,8 +64,8 @@ function App() {
     try {
       const isLogin = mode === 'login'
       const endpoint = isLogin
-        ? 'http://localhost:3000/auth/login'
-        : 'http://localhost:3000/auth/signup'
+        ? 'https://campus-app-n2ab.onrender.com/auth/login'
+        : 'https://campus-app-n2ab.onrender.com/auth/signup'
 
       const payload = isLogin
         ? { uid, password }
@@ -155,7 +155,7 @@ function App() {
     }
 
     try {
-      const res = await fetch('http://localhost:3000/listings', {
+      const res = await fetch('https://campus-app-n2ab.onrender.com/listings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -201,7 +201,7 @@ function App() {
     setMessages([])
 
     try {
-      const res = await fetch('http://localhost:3000/chat/start', {
+      const res = await fetch('https://campus-app-n2ab.onrender.com/chat/start', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -231,7 +231,7 @@ function App() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/chat/${conversationId}/messages`,
+        `https://campus-app-n2ab.onrender.com/chat/${conversationId}/messages`,
         {
           method: 'POST',
           headers: {

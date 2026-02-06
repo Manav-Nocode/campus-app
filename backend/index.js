@@ -15,7 +15,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(cors({
-    origin: 'https://campus-app-five.vercel.app' 
+    origin: '*' 
   }));
 // Health check endpoint
 app.get('/health', (req, res) => {
